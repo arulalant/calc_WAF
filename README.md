@@ -16,12 +16,20 @@ Wave Activity Flux
 	    and their climatologies and outputs the x and y
 	    components of the wave activity flux.
 
-	Assumptions (i.e. hard wired elements)
+	Assumptions by tnf_xy_onelevel.f90 script (i.e. hard wired elements)
 	    The WAF Fortran code is hard wired to produce output on a
 	    global 2.5 by 2.5 deg grid (i.e. 73 lats, 144 lons).
 	    It is hard wired that the input data is from the 250 hPa level.
 	    It is assumed that the input data is three dimensional (time, lat, lon).
-
+	
+	Python (cal_WAF.py) script assumptions and capability
+	    It assumes the global data is passed as input with any degree resolution, 
+	    which will be going to be converted to 2.5x2.5 deg. 
+	    User can choose their desired pressure level from input files.
+	    User can choose their desired time (range of dates) from the input files, 
+	    it assumes that daily input files are being passed as input but works well for monthly data also.
+	
+	
 	Reference
 	    Takaya, K., Nakamura, H., 2001.
             A formulation of a phase-independent wave-activity flux
